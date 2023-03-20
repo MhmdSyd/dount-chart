@@ -131,24 +131,37 @@ var data = [
     }
 ];
 
-
-
-
-
-
-
-
 option = {
+    title: {
+        text: "Tree",
+        left: 'center',
+        top: 'center',
+    },
+//     color: [
+//         '#c23531',
+//         '#2f4554',
+//         '#61a0a8',
+//         '#d48265',
+//         '#91c7ae',
+//         '#749f83',
+//         '#ca8622',
+//         '#bda29a',
+//         '#6e7074',
+//         '#546570',
+//         '#c4ccd3'
+// ],
     series: {
-    type: 'sunburst',
-    // emphasis: {
-    //     focus: 'ancestor'
-    // },
-    data: data,
-    radius: [50, '90%'],
-    label: {
-        rotate: 'radial'
-    }
+        type: 'sunburst',
+        // emphasis: {
+        //     focus: 'ancestor'
+        // },
+        data: data,
+        radius: [50, '90%'],
+        label: {
+            rotate: 'radial',
+            // position: 'center',
+            // formatter: () => {return "tree";}
+        }
     }
 };
 
