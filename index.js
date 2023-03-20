@@ -1,7 +1,7 @@
 var dom = document.getElementById('chart-container');
 var myChart = echarts.init(dom, null, {
-  renderer: 'canvas',
-  useDirtyRect: false
+    renderer: 'canvas',
+    useDirtyRect: false
 });
 var app = {};
 
@@ -9,43 +9,58 @@ var option;
 
 var data = [
     {
-    name: 'مشروع',
+    name: 'مشاريع',
     children: [
         {
-        name: 'نثر بذور',
+        name: "مبادرات المركز",
         value: 10,
         children: [
             {
-            name: 'مبادرات المركز',
+            name: "نثر بذور",
             value: 5
             },
             {
-            name: 'مكاسب سريعة',
+            name: "زراعة اشجار",
             value: 5,
             }
         ]
         },
         {
-        name: 'تقليم أشجار',
+        name: "مكاسب سريعة",
         value: 10,
         children: [
             {
-            name: 'ميزانية عامة',
+            name: "تقليم أشجار",
             value: 10
             },
             
         ]
         },
         {
+        name: "شراكات",
+        value: 10,
+        children: [
+            {
             name: "تسييج",
+            value: 5
+            },
+            {
+            name: "زراعة شتلات",
+            value: 5
+            },
+            
+        ]
+        },
+        {
+            name: "ميزانية عامة",
             value: 10,
             children: [
                 {
-                name: "شركات",
+                name: "نظافة",
                 value: 5
                 },
                 {
-                    name: "شركات",
+                    name: "تأهيل",
                     value: 5
                 },
                 
@@ -54,44 +69,61 @@ var data = [
     ]
     },
     {
-    name: 'حملة',
+    name: 'حملات تطوعية',
     children: [
         {
-        name: 'تقليم اشجار',
+        name: "Individual",
+        value:10,
         children: [
             {
-            name: 'individual',
-            value: 2
+            name: 'تسييج',
+            value: 5
             },
             {
-            name: 'Non-profit',
-            value: 4
+            name: 'دراسة',
+            value: 5
             }
         ]
         },
         {
-            name: "نثر بذور",
+            name: "Private",
+            value:10,
             children: [
                 {
-                name: 'Private',
-                value: 3
+                name: 'زراعة أشجار',
+                value: 5
                 },
                 {
-                name: 'Non-profit',
-                value: 1
+                name: 'تأهيل',
+                value: 5
                 }
             ]
         },
         {
-            name: "تأهيل",
+            name: "Public",
+            value:10,
             children: [
                 {
-                name: 'Public',
-                value: 1
+                name: 'تقليم أشجار',
+                value: 5
                 },
                 {
-                name: 'Non-profit',
-                value: 4
+                name: 'جمع بذور',
+                value: 5
+                }
+            ]
+        },
+        {
+            name: "Non-Profit",
+            value:10,
+            children: [
+                {
+                name: 'نثر بذور',
+                value: 5
+                },
+                {
+                name: 'زراعة شتلات',
+                value: 5
                 }
             ]
         }
