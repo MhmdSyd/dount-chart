@@ -145,7 +145,7 @@ option = {
     //     focus: 'ancestor'
     // },
     data: data,
-    radius: [0, '90%'],
+    radius: [50, '90%'],
     label: {
         rotate: 'radial'
     }
@@ -153,7 +153,7 @@ option = {
 };
 
 if (option && typeof option === 'object') {
-  myChart.setOption(option);
+    myChart.setOption(option);
 }
 
 window.addEventListener('resize', myChart.resize);
